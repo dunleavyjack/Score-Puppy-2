@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "Score Puppy 2",
+    "version": "1.0",
+    "description": "Testing",
+    "web_accessible_resources" : [
+        "images/imdb_logo_color.png",
+        "images/rt_logo_color.png"
+    ],
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+    "browser_action" : { 
+        "default_icon" : "images/arfy.png",
+        "default_popup" : "html/popup.html", 
+        "default_title" : "A popup will come"
+    },
+    "icons": {
+        "16": "images/arfy.png",
+        "32": "images/arfy.png",
+        "48": "images/arfy.png",
+        "128": "images/arfy.png"
+    },
+    "content_scripts" : [
+    { 
+    "matches" : [ 
+        "https://www.netflix.com/browse/genre/*"
+    ], 
+    "js" : [
+        "js/jquery-3.5.1.min.js",
+        "js/content.js"]
+    }
+    ]
+}
